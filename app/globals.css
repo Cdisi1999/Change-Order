@@ -1,0 +1,182 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f3f5f9;
+  color: #122033;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #d8e0ea;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.page-header h1 {
+  margin: 0 0 0.5rem;
+}
+
+.page-header p {
+  margin: 0 0 1rem;
+  color: #3d4f66;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.two-col {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+input,
+textarea {
+  border: 1px solid #bfd0e4;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+  background: #fff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.center {
+  align-items: center;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  background: #1a73e8;
+  color: white;
+}
+
+button.secondary {
+  background: #294a6c;
+}
+
+button.danger {
+  background: #9a2931;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e3e9f1;
+  padding: 0.55rem;
+  text-align: left;
+}
+
+.empty-cell {
+  color: #5f6f84;
+  text-align: center;
+}
+
+.totals-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.totals-list li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grand-total {
+  font-weight: 700;
+  color: #0f3f78;
+}
+
+.preview-block {
+  border-top: 1px dashed #d3ddeb;
+  padding-top: 0.75rem;
+}
+
+.preview-block:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .page {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+  }
+
+  .card {
+    border: none;
+    border-radius: 0;
+    padding: 0.6rem 0;
+  }
+
+  .print-button,
+  .secondary,
+  .danger {
+    display: none;
+  }
+}
